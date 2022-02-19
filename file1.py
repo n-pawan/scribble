@@ -9,3 +9,4 @@
 # instead it should update, only when i pull
 print('test')
 print('test1')
+print('test2')
