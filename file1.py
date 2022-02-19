@@ -1,13 +1,19 @@
-# file1 
-# changed in test
-# changed again from main
-# yes, yet another change from wrkspc
-# wth is happening!
-# edit from web
-# another edit
-# there is one case which is messing up: when I push from the local non-origin branch, the local origin branch is getting updated :/
-# instead it should update, only when i pull
-print('test0')
-print('test1')
-print('test2')
-print('test3')
+
+
+#git commands
+git init
+git clone
+git fetch
+git pull --rebase
+git pull --merge
+git push
+git branch <branch-name>
+git branch --delete <branch-name>
+git switch <branch-name>
+git switch -
+git log
+git reflog
+git rebase -i HEAD~3 <pick sha1 squash sha1 squash sha1>
+git cat-file d3e92575b7dd42c143e7c56aa71f968e6efbf3e0 -t
+git cat-file d3e92575b7dd42c143e7c56aa71f968e6efbf3e0 -p
+
