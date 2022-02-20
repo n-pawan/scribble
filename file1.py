@@ -9,6 +9,7 @@ git pull --merge
 git push
 git branch <branch-name>
 git branch --delete <branch-name>
+git branch -u origin/main ; to track the current branch to origin main branch
 git switch <branch-name>
 git switch -
 git reset --HARD origin/master
@@ -28,6 +29,18 @@ git reset --soft HEAD~1/sha1 <uncommit and changes in staging area and working t
 git reset --mixed HEAD~1/sha1 <uncommit and changes only in working tree>
 git reset --hard HEAD~1/sha1 <uncommit and changes cleaned up>
 git revert HEAD~1/sha1 -m 'revert command' ; need to be followed by git push
+# reset is always HEAD minus something.. we can not reset a particular commit
+# revert can be any commit, since revert is a new commit added to the tree with sha1 commit changes removed
 
 
-
+git work flow:
+    git clone
+    create a feature branch from the main branch
+    start commits into the feature branch
+    once feature completed, squash ur feature branch commits if needed 
+    rebase ur main branch against origin/master
+    rebase ur feature branch against ur main branch
+    either push from the feature branch or 
+    merge feature branch into main branch and push to origin/master
+    
+     
