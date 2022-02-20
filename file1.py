@@ -3,6 +3,7 @@
 #git commands
 git init
 git clone
+git remote -v
 git fetch
 git pull --rebase
 git pull --merge
@@ -10,6 +11,8 @@ git push
 git branch <branch-name>
 git branch --delete <branch-name>
 git branch -u origin/main ; to track the current branch to origin main branch
+git branch -v
+git branch -a
 git switch <branch-name>
 git switch -
 git reset --HARD origin/master
