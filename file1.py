@@ -2,7 +2,8 @@
 
 #git commands
 git init
-git clone
+git clone <url>
+git clone --recurse-submodules <url>
 git remote -v
 git fetch
 git pull --rebase
@@ -22,12 +23,13 @@ git tag -a v1.1 -m 'tag message, -a is verbose'
 git tag -a v1.2 15027957951b64cf874c3557a0f3547bd83b3ff6
 git reflog
 git checkout sha1 <detached head> ;# used to go back to a commit and experiment and commit code and a branch created out of it and then that can be merged
-git rebase -i HEAD~3 <pick sha1 squash sha1 squash sha1>
+git rebase -i HEAD~3/sha1 <pick sha1 squash sha1 squash sha1> ; pick the parent of the commit to be modified
 git cat-file d3e92575b7dd42c143e7c56aa71f968e6efbf3e0 -t
 git cat-file d3e92575b7dd42c143e7c56aa71f968e6efbf3e0 -p
 
 git checkout <file> ; will discard all the changes in the working area
 git checkout . ; discards all the changes in all the files in working area
+git commit --amend ; to reset last commit changes or commit message 
 git reset --soft HEAD~1/sha1 <uncommit and changes in staging area and working tree>
 git reset --mixed HEAD~1/sha1 <uncommit and changes only in working tree>
 git reset --hard HEAD~1/sha1 <uncommit and changes cleaned up>
